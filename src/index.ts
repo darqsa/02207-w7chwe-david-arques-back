@@ -1,3 +1,4 @@
+import "./loadEnv";
 import connectDatabase from "./database/connectDatabase";
 import startServer from "./server/startServer";
 
