@@ -1,12 +1,12 @@
-import mongoose, { model, Schema } from "mongoose";
+import { model, Schema } from "mongoose";
 
 const userSchema = new Schema({
-  userName: {
+  username: {
     type: String,
     required: true,
     unique: true,
   },
-  passWord: {
+  password: {
     type: String,
     required: true,
   },
@@ -14,18 +14,6 @@ const userSchema = new Schema({
     type: String,
     default:
       "https://navigatedlearning.org/assets/gooru/profile-d8cfa58723f9c1daaa7ff6986738f816.png",
-  },
-});
-
-mongoose.set("toJSON", {
-  virtuals: true,
-  transform: (doc, ret) => {
-    const newDocument = { ...ret };
-    // eslint-disable-next-line no-underscore-dangle
-    delete newDocument.__v;
-    // eslint-disable-next-line no-underscore-dangle
-    delete newDocument._id;
-    return newDocument;
   },
 });
 
