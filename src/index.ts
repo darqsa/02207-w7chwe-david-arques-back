@@ -1,5 +1,6 @@
 import connectDatabase from "./database/connectDatabase";
 import startServer from "./server/startServer";
+import "./loadEnv";
 
 const port = process.env.PORT ?? 4000;
 const mongoDB = process.env.DDBB;
