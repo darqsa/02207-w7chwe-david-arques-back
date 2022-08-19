@@ -8,8 +8,8 @@
     "build:dev": "tsc -w",
     "start": "node .",
     "start:dev": "nodemon -q",
-    "test": "jest src --passWithNoTests",
-    "test:dev": "jest src --watchAll --passWithNoTests",
+    "test": "jest src",
+    "test:dev": "jest src --watchAll",
     "test-coverage": "jest src --coverage --watchAll=false"
   },
   "engines": {
