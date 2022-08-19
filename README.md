@@ -10,4 +10,7 @@
     -> Login with a registered user with a username and password.
 
     /users/log
-    ->Get a log of all relations
+    -> Get a log of all relations
+
+    /users/:id
+    -> Get the user with the current :id with its username, passsword and status
