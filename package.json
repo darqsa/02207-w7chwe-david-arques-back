@@ -12,6 +12,9 @@
     "test:dev": "jest src --watchAll",
     "test-coverage": "jest src --coverage --watchAll=false"
   },
+  "engines": {
+    "node": "^18.x"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -29,5 +32,8 @@
     "nodemon": "^2.0.19",
     "ts-jest": "^28.0.7",
     "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "husky": "^8.0.1"
   }
 }
