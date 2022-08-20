@@ -13,8 +13,10 @@ const userSchema = new Schema({
   image: {
     type: String,
     default:
-      "https://navigatedlearning.org/assets/gooru/profile-d8cfa58723f9c1daaa7ff6986738f816.png",
+      "https://t3.ftcdn.net/jpg/03/53/11/00/360_F_353110097_nbpmfn9iHlxef4EDIhXB1tdTD0lcWhG9.jpg",
   },
+  friends: [{ type: Schema.Types.ObjectId, ref: "User" }],
+  enemies: [{ type: Schema.Types.ObjectId, ref: "User" }],
 });
 
 const User = model("User", userSchema, "users");
