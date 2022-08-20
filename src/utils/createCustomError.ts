@@ -10,5 +10,7 @@ const createCustomError = (
   error.statusCode = code;
   error.publicMessage = publicMessage;
   error.privateMessage = privateMessage;
+
+  return error;
 };
 export default createCustomError;
