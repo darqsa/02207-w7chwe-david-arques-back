@@ -14,7 +14,7 @@ export const registerUser = async (req: Request, res: Response) => {
   const user: IRegisterUser = req.body;
 
   user.password = await createHash(user.password);
-
+  // gestion de errores
   const newUser = await User.create(user);
   res.status(201).json({ user: newUser });
 };
