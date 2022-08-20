@@ -9,6 +9,9 @@ export const compareHash = (text: string, hash: string) =>
 export const createToken = (payload: TokenPayload) =>
   jwt.sign(payload, process.env.SECRET);
 
+export const verifyToken = (token: string) =>
+  jwt.verify(token, process.env.SECRET);
+
 export const createHash = (text: string) => {
   const salt = 10;
   return bcrypt.hash(text, salt);
