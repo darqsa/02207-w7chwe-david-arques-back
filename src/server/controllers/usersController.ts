@@ -24,7 +24,9 @@ export const loginUser = async (
     Error.name
   );
 
-  const findUser: IUserWithID[] = await User.find({ username: user.username });
+  const findUser: IUserWithID[] = await User.find({
+    username: user.username.toString(),
+  });
 
   try {
     const isPassWordvalid = await compareHash(
